@@ -1,0 +1,60 @@
+<doctype html>
+<html>
+	<head>
+		<style>
+			h2 {
+				margin-top: 20%;
+				font-size: 300%;
+				text-align: center;
+				opacity: 1;
+				-webkit-transition: 1s all;
+			}
+			
+			.spin {
+				color: red;
+				text-shadow: 2px 2px 2px #000;
+				-webkit-transform: scale(4) rotate(360deg);
+				-webkit-transition: 1s all;
+			}
+			
+			.split .left, .split .right, .split .up {
+				opacity: 0;
+				position: relative;
+				-webkit-transition: 1s all;
+			}
+			
+			.split .left {
+				left: -1000px;
+			}
+			
+			.split .right {
+				left: 1000px;
+			}
+			
+			.split .up {
+				top: -1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>
+			<span class="left">hey</span>
+			<span class="right">now</span>
+			<span class="up">!</span>
+		</h2>
+		<script>
+			window.onload = function(event) {
+				var el = document.querySelectorAll('h2')[0];
+				el.classList.add('spin');
+				
+				setTimeout(function() {
+					el.classList.remove('spin');
+					setTimeout(function() {
+						el.classList.add('split');				
+					}, 1000);
+				}, 2000);
+
+			};
+		</script>
+	</body>
+</html>
