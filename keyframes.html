@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		
+			h2 {
+				margin: 0px;
+				background-color: #000;
+				color: #fff;
+				position: relative;
+				text-align: center;
+				padding: 25px;
+				border: 1px solid #fff;
+			}
+			
+			h2, div {
+				height: 100px;
+			}
+		
+			@-webkit-keyframes slide-down {
+				from { top: -100px; }
+				to { top: 0px; }
+			}
+			
+			.slide-down {
+				top: -100px;
+				-webkit-animation: slide-down 2s ease-out forwards;
+			}
+			
+			@-webkit-keyframes slide-up {
+				from { top: 100px; }
+				to { top: 0px; }
+			}
+
+			.slide-up {
+				top: 100px;
+				-webkit-animation: slide-up 2s ease-out forwards;
+			}
+			
+			@-webkit-keyframes slide-right {
+				from { left: -100%; }
+				to { left: 0px; }
+			}
+			
+			.slide-right {
+				-webkit-animation: slide-right 2s ease-out forwards;				
+			}
+			
+			@-webkit-keyframes slide-left {
+				from { right: -100%; }
+				to { right: 0px; }			
+			}
+			
+			.slide-left {
+				-webkit-animation: slide-left 2s ease-out forwards;				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>Keyframe animations</h1>
+		<div style="overflow: hidden;">
+			<h2 class="slide-down">Slid down</h2>
+		</div>
+		<div style="overflow: hidden;">
+			<h2 class="slide-right">Slid Right</h2>
+		</div>	
+		<div style="overflow: hidden;">
+			<h2 class="slide-left">Slid left</h2>
+		</div>
+		<div style="overflow: hidden;">
+			<h2 class="slide-up">Slid up</h2>
+		</div>						
+	</body>
+</html>
